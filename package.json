@@ -1,0 +1,17 @@
+{
+  "name": "mountains",
+  "version": "1.0.0",
+  "description": "Practice website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Malgorzata Jaskiewicz",
+  "license": "ISC",
+  "dependencies": {
+    "@ciar4n/izmir": "^1.0.1",
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "font-awesome": "^4.7.0",
+    "lodash": "^4.17.20"
+  }
+}
