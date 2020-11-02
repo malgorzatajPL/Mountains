@@ -1,0 +1,46 @@
+@mixin btn {
+    background-color:transparent;
+    font-size:18px;
+    letter-spacing: 1px;
+    height:50px;
+    line-height:50px;
+    width:140px;
+    text-align:center;
+    margin: 20px;
+    transition: 0.3s;
+    &:active {
+        position:relative;
+        top:1px;
+    }
+}
+
+@mixin btn-violet {
+    border:1px solid #d5ddb7;
+    font-size: 19px;
+    color:#d5ddb7;
+    &:hover{
+        border:1px solid #d5ddb7;
+        color:#22181C;
+        background-color: #d5ddb7;
+    }
+}
+
+@mixin btn-green {
+    border:1px solid #22181C;
+    color:#22181C;
+    font-size: 19px;
+    &:hover{
+        border:1px solid #22181C;
+        color:#d5ddb7;
+        background-color: #22181C;
+        }
+}
+
+@mixin icons {
+    font-size: 35px;
+    padding: 30px;
+}
+
+@mixin font-green {
+    color:#eef1e3;
+}

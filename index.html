@@ -5,22 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mountains</title>
     <link rel="stylesheet" href="css/main.css">
-    
+
     <link rel="stylesheet" href="css/fontawesome-free/css/all.css">
 </head>
 <body>
-    <header>
+    <main>
+    <header id="hero">
         <div class="content">
             <h1>Aenean et velit</h1>
             <span>
                 Fusce dictum convallis metus ac porta. Aenean non pharetra lectus. Duis porttitor sem id pellentesque porta. Nam a accumsan velit.    
             </span>
         </div>
-            <nav>
-                <i class="fas fa-bars"></i>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">Landing</a></li>
+                <li><a href="#trips">Generic</a></li>
+                <li><a href="#contact">Elements</a></li>
+            </ul>
             </nav>
     </header>
-    <section class="about">
+    <section id="about">
             <h2>Quisque id est convallis</h2>
             <span>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean et velit eget nibh sodales lacinia. Porttitor mi id, dignissim purus.
             Aenean molestie, ante vel consectetur vestibulum, libero urna hendrerit nisl, ut vulputate nunc dolor eu elit. 
@@ -29,7 +38,7 @@
             </span>
       
     </section>
-    <section>
+    <section id="travel">
         <div class="trips">
             <div class="image"><img src="img/2-trip-Kangchenjunga.jpg" alt="Kangchenjunga">
             </div>
@@ -50,7 +59,7 @@
             <div class="image"><img src="img/2-trip-Mount Everest.jpg" alt="Mount Everest"></div>
         </div>
         <div class="trips">
-            <div class="image"><img src="img/2-trip-Dhaulagiri.jpg" alt="Dhaulagiri"></div>
+                <div class="image"><img src="img/2-trip-Dhaulagiri.jpg" alt="Dhaulagiri"></div>
                 <div class="inner">
                 <h4>Dhaulagiri, Nepal </h4>
                 <span>Cras tempus, nunc sed congue fermentum, libero massa ultrices velit, sed dignissim magna neque id neque.</span>
@@ -60,28 +69,61 @@
     </section>
 
     <footer>
-        <div class="form">
-
+        <div id="contact">
+            <form action="" method="get">
+                <div class="name">
+                  <label for="name">Name </label> <br>
+                  <input type="text" name="name" id="name" required>
+                </div>
+                <div class="email">
+                  <label for="email">Email </label><br>
+                  <input type="email" name="email" id="email" required>
+                </div>
+                <div class="message"><br>
+                    <label for="message">Message </label>
+                    <input type="text" name="message" id="message" required>
+                </div>
+                <div class="btn">
+                  <button class="send">Send</button>
+                  <button class="clear">Clear</button>
+                </div>
+            </form>
         </div>
-        <div class="contact">
-            <div class="phone">
+        <address>
+            <div class="contact-method">
                 <i class="fas fa-phone-alt"></i>
+                <div class="phone">
+                    <h4>Phone</h4>
+                    <span>+48 600 200 300</span>
+                </div>
             </div>
-            <div class="mail">
-                <i class="far fa-envelope"></i>
-            </div>
-            <address>
-                <i class="fas fa-map-marker-alt"></i>
+                <div class="contact-method">
+                    <i class="far fa-envelope"></i>
+                    <div class="email">
+                        <h4>Email</h4>
+                        <span>Officiis delectus architecto</span>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="address">
+                        <h4>Address</h4>
+                        <span>Mozilla Foundation <br>
+                            331 E Evelyn Ave <br>
+                            Mountain View, CA 94041 <br>
+                            USA</span>
+                        </div>
+                    </div>
+                
             </address>
-        </div>
         <div class="social">
             <i class="fab fa-instagram"></i>
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-twitter"></i>
             <i class="fab fa-youtube"></i>
-
+            <p>Created by M. Jaskiewicz  <a href="https://github.com/malgorzatajPL/"><i class="fab fa-github"></i></a> </p>
         </div>
     </footer>
-    
+    </main>
 </body>
 </html>
