@@ -1,0 +1,27 @@
+$dark-bg: #212121;
+$dark-hl: #424242;
+$dark-fg: #fff;
+$light-bg: #e0e0e0;
+$light-hl: #bdbdbd;
+$light-fg: #212121;
+
+.#{$luxbar-css-prefix}-menu-dark,
+.#{$luxbar-css-prefix}-menu-dark .dropdown ul {
+    background-color: $dark-bg;
+    color: $dark-fg;
+}
+
+.#{$luxbar-css-prefix}-menu-dark {
+    .active,
+    .#{$luxbar-css-prefix}-item:hover {
+        background-color: $dark-hl;
+    }
+
+    .#{$luxbar-css-prefix}-hamburger {
+        span,
+        span::before,
+        span::after {
+            background-color: $dark-fg;
+        }
+    }
+}

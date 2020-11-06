@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mountains</title>
     <link rel="stylesheet" href="css/main.css">
-
     <link rel="stylesheet" href="css/fontawesome-free/css/all.css">
 </head>
 <body>
@@ -17,18 +16,23 @@
                 Fusce dictum convallis metus ac porta. Aenean non pharetra lectus. Duis porttitor sem id pellentesque porta. Nam a accumsan velit.    
             </span>
         </div>
-        <nav>
-            <a href="#menu">Menu</a>
-        </nav>
-        <nav id="menu">
-            <ul class="links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">Landing</a></li>
-                <li><a href="#trips">Generic</a></li>
-                <li><a href="#contact">Elements</a></li>
-            </ul>
-            </nav>
     </header>
+    <header id="luxbar" class="luxbar-fixed">
+        <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox"/>
+        <div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">
+            <ul class="luxbar-navigation">
+                <li class="luxbar-header">
+                    <label class="luxbar-hamburger luxbar-hamburger-doublespin" 
+                    id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
+                </li>
+                <li class="luxbar-item"><a href="#hero">Home</a></li>
+                <li class="luxbar-item"><a href="#about">About us</a></li>
+                <li class="luxbar-item"><a href="#travel">Trips</a></li>
+                <li class="luxbar-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+  
     <section id="about">
             <h2>Quisque id est convallis</h2>
             <span>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean et velit eget nibh sodales lacinia. Porttitor mi id, dignissim purus.
@@ -67,7 +71,6 @@
             </div>
         </div>
     </section>
-
     <footer>
         <div id="contact">
             <form action="" method="get">
@@ -125,5 +128,10 @@
         </div>
     </footer>
     </main>
+  
 </body>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
 </html>

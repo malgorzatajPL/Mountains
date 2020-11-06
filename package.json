@@ -9,9 +9,9 @@
   "author": "Malgorzata Jaskiewicz",
   "license": "ISC",
   "dependencies": {
-    "@ciar4n/izmir": "^1.0.1",
     "@fortawesome/fontawesome-free": "^5.15.1",
     "font-awesome": "^4.7.0",
-    "lodash": "^4.17.20"
+    "include-media": "^1.4.9",
+    "luxbar": "^0.3.2"
   }
 }

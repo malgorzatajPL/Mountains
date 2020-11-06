@@ -1,61 +1,53 @@
 @import 'mixin';
+@import 'navigation luxbar/luxbar.scss';
+@import 'include-media';
 
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 html{
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    @include font-green;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  @include font-green;
+  scroll-behavior: smooth;
 }
-header{
+#hero{
+  width: 100%;
+  display: flex;
+  &::after{
+    content: "";
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;   
+    background: url(../img/1-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
     width: 100%;
-    display: flex;
-    &::after{
-      content: "";
-      opacity: 0.7;
-      top: 0;
-      left: 0;
-      position: absolute;
-      z-index: -1;   
-      background: url(../img/1-hero.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: top;
-      width: 100%;
-      height: 80vh;
+    height: 80vh;
+  }
+  .content{
+      padding: 15% 5%;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      h1{
+          font-size: 40px;
+          padding: 20px;
+          border-bottom: 2px solid #fff;
+      }
+      span{
+          padding: 20px;
+          font-size: 22px;
+          max-width: 80%;
+      }
     }
-    .content{
-        padding: 15% 5%;
-        display: flex;
-        flex-direction: column;
-        color: #fff;
-        h1{
-            font-size: 40px;
-            padding: 20px;
-            border-bottom: 2px solid #fff;
-        }
-        span{
-            padding: 20px;
-            font-size: 22px;
-            max-width: 80%;
-        }
-    }
-    nav{
-        display: none;
-    }
-    /*nav{
-        top: 5%;
-        right: 5%;
-        position: fixed;
-        @include font-green;
-        i{
-            font-size: 40px;
-        }
-    }  */
 }
+
 #about{
     width: 100%;
     background-color: #22181C;
@@ -133,10 +125,15 @@ footer{
     background-color: rgb(34, 24, 28);
     @include font-green;
     #contact{
-        width: 45%;
-        padding: 10px; 
+        width: 50%;
+        padding: 20px; 
+        @include media('<=desktop') {
+             width: 65%;
+             margin: 0 auto;
+             padding: 50px;
+            }
         form{
-            padding: 8%;
+            padding: 2%;
             display: flex;
             width: 100%;
             justify-content: space-between;
@@ -150,6 +147,8 @@ footer{
            width: 220px;
             height: 50px;
             background: rgba(212, 212, 255, 0.1);
+            font-size: 22px;
+            color: #fff;
             border: none;
             border-radius: 0;
             display: flex;
@@ -177,27 +176,39 @@ footer{
         }
     }
     address{
-        width: 45%;
-        max-width: 45%;
+        width: 50%;
+        max-width: 50%;
         right: 0;
         position: absolute;
+        @include media('<=desktop') {
+            width: 100%;
+            max-width: 100%;
+            position: relative;
+            display: flex;
+        }
         .contact-method{
-        width: 100%;
-        display: block;
-        padding: 6%;
-        position: relative;
+            width: 100%;
+            display: block;
+            padding: 6%;
+            position: relative;
        i{
            @include icons;
            position: absolute;
-           left: 20px;
+           left: 15px;
            top: 20px;
+           @include media('<=desktop') {
+           position: relative;
+             }
        }
        .phone, .email, .address{
            display: flex;
            flex-direction: column;
            padding-left: 15%;
            font-style: normal;
-       h4{
+        @include media('<=desktop') {
+            display: block;
+        }
+            h4{
            margin-bottom: 3%;
            font-size: 28px;
        }
@@ -205,7 +216,10 @@ footer{
            font-size: 18px;
            letter-spacing: 0.5px;
            line-height: 1.5;
-       }
+        @include media('<=desktop') {
+            line-height: 2;
+        }
+        }
        }
     }
     > :before{
@@ -214,7 +228,10 @@ footer{
         display: block;
         position: absolute;
         top: 0;
-        width: 70vh;
+        width: 70%;
+        @include media('<=desktop') {
+            display: none;
+             }
     }
     > :first-child{
         &:before{
