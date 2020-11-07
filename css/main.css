@@ -296,10 +296,22 @@ html {
   border-bottom: 2px solid #fff;
 }
 
+@media (max-width: 768px) {
+  #hero .content h1 {
+    font-size: 30px;
+  }
+}
+
 #hero .content span {
   padding: 20px;
   font-size: 22px;
   max-width: 80%;
+}
+
+@media (max-width: 768px) {
+  #hero .content span {
+    font-size: 18px;
+  }
 }
 
 #about {
@@ -326,6 +338,13 @@ html {
   padding: 5% 0 10% 5%;
 }
 
+@media (max-width: 768px) {
+  #about span {
+    width: 100%;
+    padding: 5%;
+  }
+}
+
 .trips {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -339,13 +358,50 @@ html {
   color: #22181C;
 }
 
+.trips:nth-child(2) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .trips:nth-child(2) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .trips {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .trips .image {
   background-position: center center;
   background-size: cover;
   border-radius: 0;
   display: block;
   position: relative;
-  width: 30%;
+  width: 40%;
+}
+
+@media (max-width: 1024px) {
+  .trips .image {
+    width: 65%;
+  }
+}
+
+@media (max-width: 768px) {
+  .trips .image {
+    width: 100%;
+  }
 }
 
 .trips .image:before {
@@ -361,6 +417,7 @@ html {
 }
 
 .trips .image img {
+  max-height: 80vh;
   border-radius: 0;
   display: block;
   width: 100%;
@@ -445,7 +502,13 @@ footer #contact {
   footer #contact {
     width: 65%;
     margin: 0 auto;
-    padding: 50px;
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer #contact {
+    width: 100%;
   }
 }
 
@@ -479,6 +542,12 @@ footer #contact form input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  footer #contact form input {
+    width: auto;
+  }
 }
 
 footer #contact form input:focus {
