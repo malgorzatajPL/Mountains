@@ -47,6 +47,7 @@
       -ms-flex-align: center;
           align-items: center;
   height: 58px;
+  max-width: 320px;
 }
 
 .luxbar-menu-right .luxbar-hamburger {
@@ -278,6 +279,13 @@ html {
   height: 80vh;
 }
 
+@media (max-width: 320px) {
+  #hero::after {
+    height: 100%;
+    width: 100%;
+  }
+}
+
 #hero .content {
   padding: 15% 5%;
   display: -webkit-box;
@@ -290,6 +298,12 @@ html {
   color: #fff;
 }
 
+@media (max-width: 320px) {
+  #hero .content {
+    padding: 50px 20px;
+  }
+}
+
 #hero .content h1 {
   font-size: 40px;
   padding: 20px;
@@ -299,6 +313,12 @@ html {
 @media (max-width: 768px) {
   #hero .content h1 {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  #hero .content h1 {
+    font-size: 22px;
   }
 }
 
@@ -314,6 +334,12 @@ html {
   }
 }
 
+@media (max-width: 320px) {
+  #hero .content span {
+    font-size: 16px;
+  }
+}
+
 #about {
   width: 100%;
   background-color: #22181C;
@@ -326,9 +352,23 @@ html {
           flex-direction: column;
 }
 
+@media (max-width: 320px) {
+  #about {
+    padding: 5%;
+    text-align: center;
+  }
+}
+
 #about h2 {
   padding: 5% 0 0 5%;
   letter-spacing: 1px;
+}
+
+@media (max-width: 320px) {
+  #about h2 {
+    font-size: 22px;
+    letter-spacing: 0;
+  }
 }
 
 #about span {
@@ -342,6 +382,14 @@ html {
   #about span {
     width: 100%;
     padding: 5%;
+  }
+}
+
+@media (max-width: 320px) {
+  #about span {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10%;
   }
 }
 
@@ -443,15 +491,36 @@ html {
   max-width: 100%;
 }
 
+@media (max-width: 320px) {
+  .trips .inner {
+    width: 100%;
+    padding: 5%;
+    text-align: center;
+  }
+}
+
 .trips .inner h4 {
   font-size: 26px;
   padding: 20px;
+}
+
+@media (max-width: 320px) {
+  .trips .inner h4 {
+    font-size: 22px;
+    padding: 5px;
+  }
 }
 
 .trips .inner span {
   font-size: 16px;
   padding: 15px;
   line-height: 1.5;
+}
+
+@media (max-width: 320px) {
+  .trips .inner span {
+    padding: 5%;
+  }
 }
 
 .trips .inner button {
@@ -473,6 +542,13 @@ html {
 .trips .inner button:active {
   position: relative;
   top: 1px;
+}
+
+@media (max-width: 320px) {
+  .trips .inner button {
+    width: 120px;
+    font-size: 16px;
+  }
 }
 
 .trips .inner button:hover {
@@ -512,6 +588,13 @@ footer #contact {
   }
 }
 
+@media (max-width: 320px) {
+  footer #contact {
+    text-align: center;
+    padding: 20px;
+  }
+}
+
 footer #contact form {
   padding: 2%;
   display: -webkit-box;
@@ -531,6 +614,12 @@ footer #contact form label {
   line-height: 3;
 }
 
+@media (max-width: 320px) {
+  footer #contact form label {
+    font-size: 16px;
+  }
+}
+
 footer #contact form input {
   width: 220px;
   height: 50px;
@@ -547,6 +636,12 @@ footer #contact form input {
 @media (max-width: 768px) {
   footer #contact form input {
     width: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  footer #contact form input {
+    width: 100%;
   }
 }
 
@@ -593,6 +688,20 @@ footer #contact form .btn button:active {
   top: 1px;
 }
 
+@media (max-width: 320px) {
+  footer #contact form .btn button {
+    width: 120px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  footer #contact form .btn button {
+    font-size: 16px;
+    width: 80px;
+  }
+}
+
 footer #contact form .btn button:hover {
   border: 1px solid #d5ddb7;
   color: #22181C;
@@ -617,11 +726,29 @@ footer address {
   }
 }
 
+@media (max-width: 320px) {
+  footer address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 footer address .contact-method {
   width: 100%;
   display: block;
   padding: 6%;
   position: relative;
+}
+
+@media (max-width: 320px) {
+  footer address .contact-method {
+    padding: 0;
+  }
 }
 
 footer address .contact-method i {
@@ -632,9 +759,23 @@ footer address .contact-method i {
   top: 20px;
 }
 
+@media (max-width: 320px) {
+  footer address .contact-method i {
+    font-size: 30px;
+  }
+}
+
 @media (max-width: 1024px) {
   footer address .contact-method i {
     position: relative;
+  }
+}
+
+@media (max-width: 320px) {
+  footer address .contact-method i {
+    font-size: 30px;
+    padding-left: 30px;
+    left: 0;
   }
 }
 
@@ -656,9 +797,25 @@ footer address .contact-method .phone, footer address .contact-method .email, fo
   }
 }
 
+@media (max-width: 320px) {
+  footer address .contact-method .phone, footer address .contact-method .email, footer address .contact-method .address {
+    padding-left: 0;
+    margin: 10px 0 20px 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
 footer address .contact-method .phone h4, footer address .contact-method .email h4, footer address .contact-method .address h4 {
   margin-bottom: 3%;
   font-size: 28px;
+}
+
+@media (max-width: 320px) {
+  footer address .contact-method .phone h4, footer address .contact-method .email h4, footer address .contact-method .address h4 {
+    font-size: 20px;
+  }
 }
 
 footer address .contact-method .phone span, footer address .contact-method .email span, footer address .contact-method .address span {
@@ -670,6 +827,13 @@ footer address .contact-method .phone span, footer address .contact-method .emai
 @media (max-width: 1024px) {
   footer address .contact-method .phone span, footer address .contact-method .email span, footer address .contact-method .address span {
     line-height: 2;
+  }
+}
+
+@media (max-width: 320px) {
+  footer address .contact-method .phone span, footer address .contact-method .email span, footer address .contact-method .address span {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 
@@ -703,6 +867,13 @@ footer .social i {
   color: #eef1e3;
   font-size: 35px;
   padding: 30px;
+  padding: 15px;
+}
+
+@media (max-width: 320px) {
+  footer .social i {
+    font-size: 30px;
+  }
 }
 
 footer .social p {

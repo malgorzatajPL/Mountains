@@ -12,12 +12,20 @@
         position:relative;
         top:1px;
     }
+    @include media('<=phone') {
+ width: 120px;
+ font-size: 16px;
+    }      
 }
 
 @mixin btn-violet {
     border:1px solid #d5ddb7;
     font-size: 19px;
     color:#d5ddb7;
+    @include media('<=phone') {
+ font-size: 16px;
+ width: 80px;
+    }      
     &:hover{
         border:1px solid #d5ddb7;
         color:#22181C;
@@ -39,6 +47,10 @@
 @mixin icons {
     font-size: 35px;
     padding: 30px;
+    @include media('<=phone') {
+        font-size: 30px;
+       
+    }
 }
 
 @mixin font-green {
