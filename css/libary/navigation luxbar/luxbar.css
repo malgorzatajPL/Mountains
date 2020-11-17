@@ -47,7 +47,13 @@
       -ms-flex-align: center;
           align-items: center;
   height: 58px;
-  max-width: 320px;
+}
+
+.luxbar-menu-left .luxbar-navigation,
+.luxbar-menu-left .luxbar-header {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .luxbar-menu-right .luxbar-hamburger {

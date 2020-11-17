@@ -10,6 +10,7 @@
 %hamburger-lines {
     span {
         background-color: transparent;
+
         &::before,
         &::after {
             margin-top: 0;
@@ -17,33 +18,39 @@
     }
 }
 
-.#{$luxbar-css-prefix}-header {
+.luxbar-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: $luxbar-height;
-    max-width: 320px;
 }
 
-.#{$luxbar-css-prefix}-menu-right {
-    .#{$luxbar-css-prefix}-hamburger {
+.luxbar-menu-left {
+    .luxbar-navigation,
+    .luxbar-header {
+        justify-content: flex-start;
+    }
+}
+
+.luxbar-menu-right {
+    .luxbar-hamburger {
         margin-left: auto;
     }
 }
 
-.#{$luxbar-css-prefix}-brand {
+.luxbar-brand {
     font-size: 1.6em;
     padding: $luxbar-padding;
 }
 
-.#{$luxbar-css-prefix}-menu {
+.luxbar-menu {
     min-height: $luxbar-height;
     transition: $luxbar-transition;
     width: 100%;
 }
 
-.#{$luxbar-css-prefix}-navigation {
+.luxbar-navigation {
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -51,8 +58,8 @@
     margin: 0;
 }
 
-.#{$luxbar-css-prefix}-menu,
-.#{$luxbar-css-prefix}-item {
+.luxbar-menu,
+.luxbar-item {
     a {
         text-decoration: none;
         color: inherit;
@@ -60,7 +67,7 @@
     }
 }
 
-.#{$luxbar-css-prefix}-item {
+.luxbar-item {
     height: $luxbar-height;
 
     a {
@@ -69,13 +76,14 @@
     }
 }
 
-.#{$luxbar-css-prefix}-hamburger {
+.luxbar-hamburger {
     padding: $luxbar-padding;
     position: relative;
     cursor: pointer;
 
     span {
         @extend %general-hamburger-span;
+
         &::before,
         &::after {
             @extend %general-hamburger-span;
@@ -93,20 +101,21 @@
     }
 }
 
-.#{$luxbar-css-prefix}-checkbox {
+.luxbar-checkbox {
     display: none;
 
-    &:not(:checked) ~.#{$luxbar-css-prefix}-menu {
+    &:not(:checked) ~.luxbar-menu {
         overflow: hidden;
         height: $luxbar-height;
     }
 
-    &:checked ~.#{$luxbar-css-prefix}-menu {
+    &:checked ~.luxbar-menu {
         transition: height $luxbar-transition;
         height: 100vh;
         overflow: auto;
+
         li {
-            .#{$luxbar-css-prefix}-hamburger {
+            .luxbar-hamburger {
                 @extend %hamburger-lines;
             }
         }
@@ -117,14 +126,17 @@
     position: relative;
     height: auto;
     min-height: $luxbar-height;
+
     &:hover > ul {
         position: relative;
         display: block;
         min-width: 100%;
     }
+
     > a {
         &::after {
             $expand-arrow-height: 5px;
+
             position: absolute;
             content: '';
             right: 10px;
@@ -140,10 +152,12 @@
         overflow-x: hidden;
         list-style: none;
         padding: 0;
-        .#{$luxbar-css-prefix}-item {
+
+        .luxbar-item {
             min-width: 100%;
             height: $luxbar-height / 2;
             padding: 5px 10px 5px 40px;
+
             a {
                 min-height: $luxbar-height / 2;
                 line-height: $luxbar-height / 2;

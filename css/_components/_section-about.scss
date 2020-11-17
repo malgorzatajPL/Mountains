@@ -1,0 +1,40 @@
+#about{
+    width: 100%;
+    background-color: #22181C;
+    display: flex;
+    flex-direction: column;
+    @include media('<=phone') {
+        padding: 5%;
+        text-align: center;
+    }      
+    h2{
+        padding: 5% 0 0 5%;
+        letter-spacing: 1px;
+        @include media('>=phone', '<=550px') { 
+            font-size: 20px;
+        }
+        @include media('<=phone') {
+            font-size: 18px;
+            letter-spacing: 0;
+        }      
+    }
+    span{
+        width: 70%;
+        line-height: 1.8;
+        font-size: 18px;
+        padding: 5% 0 10% 5%;
+        @include media('<=tablet') {
+            width: 100%;
+            padding: 5%;
+        }
+        @include media('>=phone', '<=550px') { 
+            font-size: 16px;
+            text-align: center;
+        }
+        @include media('<=phone') {
+            font-size: 16px;
+            line-height: 1.5;
+            padding: 10%;    
+        }      
+    }
+}   
