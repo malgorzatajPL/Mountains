@@ -5,13 +5,13 @@
 @import '_components/section-travel';
 @import '_components/header-hero';
 @import 'libary/navigation luxbar/luxbar.scss';
-@import 'libary/fontawesome-free/css/all.min.css';
+@import 'libary/all.min.css';
 
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
+} 
 html{
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;

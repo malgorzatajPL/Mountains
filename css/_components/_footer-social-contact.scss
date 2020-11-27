@@ -7,34 +7,32 @@ footer{
     @include media('>550px', '<=tablet') {
         display: flex;
         flex-direction: row;
+        
     }
     @include media('<=phone') {
         justify-content: center;
     }
     address{
-        width: 35%;
+        width: 40%;
         max-width: 50%;
-        margin: 0 30px;
-        right: 0; 
         display: flex;
         flex-direction: column;
         padding-left: 15%;
         font-style: normal; 
         @include media('>=tablet', '<=desktop') {
-            width: 40%;
             align-self: center;
             margin: 0;
             padding-left: 0;
         }
         @include media('>=550px', '<=tablet') {
-            width: 45%;
+            width: 47%;
+            justify-content: space-around;
+            margin: 0 auto;
+            padding: 0;
         }
-        @include media('>=phone', '<=550px') { 
-            display: flex;
-            flex-direction: column; 
-            text-align: center;
+        @include media('>=phone', '<=450px') { 
             margin: 0;
-            
+            width: 100%;
         } 
         @include media('<=phone') {
             width: 100%;
@@ -46,20 +44,21 @@ footer{
             display: flex;
             padding: 6%;
             position: relative;
-        @include media('<=phone') {
+            @include media('>=550px', '<=tablet') { 
+                 margin: 0 auto;
+            }
+        @include media('>=phone', '<=550px') {
             padding: 0;
             justify-content: space-around;
+            font-size: 16px;
+            margin: 20px 0;
             } 
         i{
            @include icons; 
-           @include media('>=phone', '<=550px') { 
-            margin-right: 15px;
-        }
            @include media('<=phone') {
                 font-size: 30px; 
                 left: 0;
           }         
-        
         @include media('>=phone', '<=550px') { 
             padding-left: 0;
             margin: 10px 0 20px 0;
@@ -70,12 +69,16 @@ footer{
         h4{
            margin-bottom: 3%;
            font-size: 28px;
+        @include media('>=550px', '<=tablet') { 
+            margin-bottom: 0;
+            font-size: 22px;
+        }
         @include media('>=phone', '<=550px') { 
             font-size: 20px;
             margin-bottom: 1%;
         }
         @include media('<=phone') {
-            font-size: 18;
+            font-size: 18px;
         } 
        }
        span{
@@ -85,30 +88,17 @@ footer{
         @include media('<=desktop') {
             line-height: 2;
         }
+        @include media('>=550px', '<=tablet') { 
+            line-height: 1.6;
+        }
         @include media('<=phone') {
-            font-size: 16px;     
+//font-size: 16px;     
             line-height: 1.5;
         } 
         }
        }
     }
-    > :before{
-        border-top: solid 1px rgba(197, 216, 109, 0.3);
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        width: 70%;
-        @include media('<=desktop') {
-            display: none;
-        }
-    }
-    > :first-child{
-        &:before{
-            display: none;
-        }
-    }
-}
+ }
 .social{
     height: auto;
     width: 100%;

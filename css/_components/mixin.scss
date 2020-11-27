@@ -13,17 +13,16 @@
         position:relative;
         top:1px;
     }
-    @include media('<=phone') {
-        width: 120px;
-    }      
+        
 }
 
 @mixin btn-violet {
     border:1px solid #d5ddb7;
     font-size: 19px;
     color:#d5ddb7;
+    width: 120px;
     @include media('>=phone', '<=tablet') {
-        width: 100px;
+        width: 110px;
         font-size: 16px;
         display: inline-flex;
     }
