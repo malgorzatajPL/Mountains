@@ -14,8 +14,9 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -39,6 +40,10 @@ form {
     width: auto;
     margin: 0;
   }
+}
+
+form .contact {
+  padding: 10px;
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {

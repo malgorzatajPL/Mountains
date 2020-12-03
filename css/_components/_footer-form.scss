@@ -6,7 +6,7 @@ form{
     justify-content: space-between;
     flex-wrap: wrap;     
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     @include media('>=tablet', '<=desktop') {
         margin: 0 auto;
         padding: 0 20px; 
@@ -23,6 +23,7 @@ form{
         margin: 0;
     }  
         .contact{
+            padding: 10px;
             @include media('>=phone', '<=desktop') {
                display: grid;
             }
